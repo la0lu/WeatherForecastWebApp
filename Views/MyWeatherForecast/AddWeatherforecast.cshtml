@@ -1,0 +1,45 @@
+﻿@model AddNewWeatherForecastViewModel
+
+@{
+    ViewData["Title"] = "Add Weatherforecast";
+
+    var Summaries = new List<string> { "Bad heat", "extremer", "flooded", "rain", "rave", "wounded", "hot", "scorching", "sunny", "snowy" };
+}
+
+<h3>Add New Weatherforecast</h3>
+ 
+
+    <form method="post" asp-controller="MyWeatherForecast" asp-action="AddWeatherforecast" class="frm-addNew">
+       
+        <div class="big-wrapper">
+            <div>
+                <label>Weather summary</label>
+                <select id="summaries" asp-for="Summary">
+                    @foreach (var item in Summaries)
+                    {
+                        <option value="@item.ToLower()">@item</option>
+                    }
+                </select>
+            </div>
+           
+            <div> 
+                <label>Weather temperature</label>
+                <select id="temperature" asp-for="TemperatureC">
+                    @for (var i = 0; i < 101; i++)
+                    {
+                        <option value="@i">@i</option>
+                    }
+                </select>
+            </div>
+           
+
+            
+        </div>
+
+        <div class="big-wrapper">
+            <button> Add New</button>  
+            
+        </div>
+        
+    </form>
+
