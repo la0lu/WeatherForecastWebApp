@@ -30,7 +30,7 @@ namespace WeatherForecast.Controllers
                 return View();
             }
 
-            return View(ModelState);
+            return View(model);
         }
     }
 }

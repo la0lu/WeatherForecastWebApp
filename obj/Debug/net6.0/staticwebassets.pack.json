@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\img\\Bad heat.jpg"
     },
     {
+      "Id": "C:\\Users\\hp\\source\\repos\\WeatherForecast\\wwwroot\\img\\cloudy.jpg",
+      "PackagePath": "staticwebassets\\img\\cloudy.jpg"
+    },
+    {
       "Id": "C:\\Users\\hp\\source\\repos\\WeatherForecast\\wwwroot\\img\\extremer.jpg",
       "PackagePath": "staticwebassets\\img\\extremer.jpg"
     },

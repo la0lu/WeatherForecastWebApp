@@ -1,0 +1,23 @@
+﻿@model LoginViewModel
+@{
+
+}
+
+<h3>Login here</h3>
+
+<div>
+    <form mehtod ="post" asp-action="Login" asp-controller="Account"> 
+       
+        <div>
+            <span asp-validation-for="Email" style="color:red; font-size:10px"></span>        
+            <input asp-for="Email" placeholder="Email" />
+        </div>
+       
+        <div>
+            <span asp-validation-for="Password" style="color:red; font-size:10px"></span>        
+            <input asp-for="Password" placeholder="Password"/>
+        </div>
+        
+        <button>Submit</button>
+    </form>
+</div>

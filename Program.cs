@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using WeatherForecast.Data;
+using WeatherForecast.Data.Entities;
 using WeatherForecast.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,7 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
-
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddDbContext<MVCContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("default")));
+builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<MVCContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

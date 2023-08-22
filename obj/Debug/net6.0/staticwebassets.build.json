@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fnJv60BNssG8+sPk/iSCSu9al6niLQqUwcK9Ycoe4W4=",
+  "Hash": "ih7Qu62VEAcrsj3Mg97N0DPfdpBkd2zB0EtaCPp1HyU=",
   "Source": "WeatherForecast",
   "BasePath": "_content/WeatherForecast",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Bad heat.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\hp\\source\\repos\\WeatherForecast\\wwwroot\\img\\cloudy.jpg",
+      "SourceId": "WeatherForecast",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hp\\source\\repos\\WeatherForecast\\wwwroot\\",
+      "BasePath": "_content/WeatherForecast",
+      "RelativePath": "img/cloudy.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\cloudy.jpg"
     },
     {
       "Identity": "C:\\Users\\hp\\source\\repos\\WeatherForecast\\wwwroot\\img\\extremer.jpg",

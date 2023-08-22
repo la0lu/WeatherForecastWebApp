@@ -12,14 +12,17 @@
 
         public void Dispose() { }
 
-        public async Task<TResult?> MakeRequest<TResult, TData>(string address, string methodtype, TData data)
+        public async Task<TResult?> MakeRequest<TResult, TData>(string address, string methodtype, TData data, string token)
         {
             if(string.IsNullOrEmpty(address)) throw new ArgumentNullException("address");
             if(string.IsNullOrEmpty(methodtype)) throw new ArgumentNullException("method type");
 
             var apiResult = new HttpResponseMessage();
 
-            switch(methodtype)
+            if (!string.IsNullOrEmpty(token))
+                _client.DefaultRequestHeaders.Add("Authorization", "Bearer" + token);
+
+            switch (methodtype)
             {
                 case "POST":
                     apiResult = await _client.PostAsJsonAsync($"{_baseUrl}{address}", data);
@@ -50,7 +53,7 @@
                 
             }
 
-            return default(TResult);
+            return default;
         }
     }
 }

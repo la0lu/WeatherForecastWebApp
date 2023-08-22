@@ -16,7 +16,7 @@ namespace WeatherForecast.Services
             var address = "/WeatherForecast/get-all";
             var methodType = ApiVerbs.GET.ToString();
 
-            var result = await MakeRequest<IEnumerable<MyWeatherForecast>, string>(address, methodType, "");
+            var result = await MakeRequest<IEnumerable<MyWeatherForecast>, string>(address, methodType, "", "");
 
             if(result != null)
                 return result;
@@ -29,7 +29,7 @@ namespace WeatherForecast.Services
             var address = "/WeatherForecast/add";
             var methodType = ApiVerbs.POST.ToString();
 
-            var result = await MakeRequest<string, MyWeatherForecast>(address, methodType, entity);
+            var result = await MakeRequest<IEnumerable<char>, MyWeatherForecast>(address, methodType, entity, "");
 
             if(result!= null)
                 return true;
